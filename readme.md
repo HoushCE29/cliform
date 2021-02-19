@@ -108,7 +108,7 @@ public class MyView extends SmartForm {
 
 Finally, an application typically has user interaction. For CLI applications, this is in the form of a user's keyboard input. User input can be piped into Java code by referencing the method that will handle it.
 The name of the method should be wrapped in square brackets: `[doHandleInput]`. If the user input potentially contains sensitive information like a password, the method name should be prefixed with the bang ( `!` ) character: `[!handleReadPassword]`.
-The method this references can return any type, but in order to control form flow (e.g. go to another form, re-prompt, exit, etc.), it should return an instance of `FormAction`. The inputs to the method can only be `Map<String, String>` (the variable-value map), `String` (the user input), or `Console` (the console object being printed to).
+The method this references can return any type, but in order to control form flow (e.g. go to another form, re-prompt, exit, etc.), it should return an instance of `FormAction`. The inputs to the method can only be `Map<String, Object>` (the variable-value map), `String` (the user input), or `Console` (the console object being printed to).
 If the square bracket characters need to be escaped, simple wrap it in block-variable notation: `${[}`.
 
 A simple login example:
